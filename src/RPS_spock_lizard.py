@@ -22,11 +22,20 @@ class Game:
 
     def assess_game(self, user_action, computer_action):
         if user_action == computer_action:
-            print()
+            print("Empate")
             return GameResult.TIE
-        
+
         if computer_action in self.victories[user_action]:
-            return GameResult.VICTORY
             
+            print(f"Victoria: {user_action} vence a {computer_action}")
+            return GameResult.VICTORY
+
+        print(f"Derrota: {computer_action} vence a {user_action}")
         return GameResult.DEFEAT
     
+    def play():
+        pass
+
+if __name__ == "__main__":
+    game = Game()
+    game.play()
