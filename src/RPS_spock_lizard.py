@@ -19,3 +19,14 @@ class Game:
         GameAction.LIZARD: [GameAction.SPOCK, GameAction.PAPER],
         GameAction.SPOCK: [GameAction.SCISSORS, GameAction.ROCK],
     }
+
+    def assess_game(self, user_action, computer_action):
+        if user_action == computer_action:
+            print()
+            return GameResult.TIE
+        
+        if computer_action in self.victories[user_action]:
+            return GameResult.VICTORY
+            
+        return GameResult.DEFEAT
+    
