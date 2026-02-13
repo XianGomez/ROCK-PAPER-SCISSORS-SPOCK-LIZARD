@@ -44,25 +44,25 @@ class Game:
         valid_input = False
         while valid_input == False:
             user_action = input("Selecciona una de las siguientes opciones:'ROCK', 'PAPER', 'SCISSORS', 'SPOCK', 'LIZARD': ").upper()
-            print(f"input: {user_action}")
             if user_action in GameAction.valid_actions:
-                print("GOD")
                 valid_input = True
                 return user_action
             else:
                 print("Acción denegada, inserte una opción válida")
 
 
-    def computer_action():
-        computer_action = random.choice(GameAction)
-        print(computer_action)
+    def computer_action(self):
+        computer_action = random.choice(GameAction.valid_actions)
+        print(f"Seleccion de la máquina: {computer_action}")
         return computer_action
     
     def replay():
         pass
 
     def play(self):
-        Game.user_action(self)
+        computer = self.computer_action()
+        user = self.user_action()
+        
         
 
 if __name__ == "__main__":
