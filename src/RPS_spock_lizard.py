@@ -56,12 +56,24 @@ class Game:
         print(f"Seleccion de la máquina: {computer_action}")
         return computer_action
     
-    def replay():
-        pass
+    def replay(self):
+        while True:
+            play_again = input("¿Volver a jugar? (y/n): ").upper()
+            if play_again == "Y":
+                return True
+            if play_again == "N":
+                return False
+            print("Opción no válida. Escribe 'y' o 'n'.")
 
     def play(self):
-        computer = self.computer_action()
-        user = self.user_action()
+        while True:
+            user = self.user_action()
+            computer = self.computer_action()
+            self.assess_game(user, computer)
+            continue_game = self.replay()
+            if not continue_game:
+                print("Gracias")
+                break
         
         
 
