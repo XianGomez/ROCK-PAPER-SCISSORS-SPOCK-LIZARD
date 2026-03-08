@@ -18,5 +18,5 @@ Sigue estos pasos para configurar el proyecto localmente utilizando un entorno v
 
 ### 1. Clonar el repositorio
 ```bash
-git clone [https://github.com/TU_USUARIO/TU_REPOSITORIO.git](https://github.com/TU_USUARIO/TU_REPOSITORIO.git)
-cd TU_REPOSITORIO
+git clone https://github.com/XianGomez/ROCK-PAPER-SCISSORS-SPOCK-LIZARD.git
+cd ROCK-PAPER-SCISSORS-SPOCK-LIZARD
